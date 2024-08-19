@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@shared/*": ["src/shared/*"],
+      "@shared/*": ["src//components/shared/*"],
       "@styles/*": ["src/styles/*"],
       "@pages/*": ["src/pages/*"],
       "@remote/*": ["src/remote/*"],
