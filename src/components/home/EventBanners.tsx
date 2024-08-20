@@ -28,7 +28,12 @@ function EventBanners() {
                     <Text bold={true}>{banner.title}</Text>
                     <Text typography="t6">{banner.subTitle}</Text>
                   </Flex>
-                  <Image src={banner.iconUrl} width={40} height={40} alt="" />
+                  <Image
+                    src={banner.iconUrl}
+                    width={40}
+                    height={40}
+                    alt="이벤트 배너 아이콘"
+                  />
                 </Flex>
               </Link>
             </SwiperSlide>
