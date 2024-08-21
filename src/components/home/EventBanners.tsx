@@ -11,7 +11,6 @@ import Skeleton from '@shared/Skeleton'
 function EventBanners() {
   const { data } = useEventBanners()
 
-  console.log(data)
   return (
     <div style={{ padding: 24 }}>
       <Swiper spaceBetween={8}>

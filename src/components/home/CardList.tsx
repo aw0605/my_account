@@ -13,8 +13,6 @@ function CardList() {
 
   const isShowMoreButton = data?.items.length ?? 0 > 5
 
-  console.log(data?.items)
-
   return (
     <div style={{ padding: 24 }}>
       <Text

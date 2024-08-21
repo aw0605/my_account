@@ -1,15 +1,18 @@
 import {
   collection,
+  doc,
+  getDoc,
   getDocs,
   limit,
   query,
   QuerySnapshot,
   startAfter,
+  where,
 } from 'firebase/firestore'
 
 import { Card } from '@models/card'
 import { store } from './firebase'
-import { COLLECTIONS } from '@/constants/collection'
+import { COLLECTIONS } from '@constants/collection'
 
 export async function getCards(pageParam?: QuerySnapshot<Card>) {
   const cardQuery =
@@ -32,4 +35,26 @@ export async function getCards(pageParam?: QuerySnapshot<Card>) {
   return { items, lastVisible }
 }
 
-export default getCards
+export async function getSearchCards(keyword: string) {
+  const searchQuery = query(
+    collection(store, COLLECTIONS.CARD),
+    where('name', '>=', keyword),
+    where('name', '<=', keyword + '\uf8ff'),
+  )
+
+  const cardSnapshot = await getDocs(searchQuery)
+
+  return cardSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...(doc.data() as Card),
+  }))
+}
+
+export async function getCard(id: string) {
+  const snapshot = await getDoc(doc(collection(store, COLLECTIONS.CARD), id))
+
+  return {
+    id: snapshot.id,
+    ...(snapshot.data() as Card),
+  }
+}

@@ -37,10 +37,12 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:9.0.0"],\
           ["eslint-plugin-prettier", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:5.0.0"],\
           ["firebase", "npm:10.5.2"],\
+          ["framer-motion", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:10.16.4"],\
           ["next", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:13.5.6"],\
           ["prettier", "npm:3.0.3"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:18.3.1"],\
+          ["react-infinite-scroll-component", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:6.1.0"],\
           ["react-query", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:3.39.3"],\
           ["swiper", "npm:11.0.3"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
@@ -218,6 +220,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@emotion/is-prop-valid", [\
+      ["npm:0.8.8", {\
+        "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-f6be625f06.zip/node_modules/@emotion/is-prop-valid/",\
+        "packageDependencies": [\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@emotion/memoize", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.3.0", {\
         "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-1.3.0-40d3d3718f-4620b62aac.zip/node_modules/@emotion/is-prop-valid/",\
         "packageDependencies": [\
@@ -228,6 +238,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@emotion/memoize", [\
+      ["npm:0.7.4", {\
+        "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-b2376548fc.zip/node_modules/@emotion/memoize/",\
+        "packageDependencies": [\
+          ["@emotion/memoize", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:0.9.0", {\
         "packageLocation": "./.yarn/cache/@emotion-memoize-npm-0.9.0-ccd80906b3-13f474a920.zip/node_modules/@emotion/memoize/",\
         "packageDependencies": [\
@@ -3528,6 +3545,34 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["framer-motion", [\
+      ["npm:10.16.4", {\
+        "packageLocation": "./.yarn/cache/framer-motion-npm-10.16.4-aea0dc4fd7-a50f2124fb.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:10.16.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:10.16.4", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-4be18187c7/0/cache/framer-motion-npm-10.16.4-aea0dc4fd7-a50f2124fb.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:10.16.4"],\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:18.3.1"],\
+          ["tslib", "npm:2.6.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["fs.realpath", [\
       ["npm:1.0.0", {\
         "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-444cf1291d.zip/node_modules/fs.realpath/",\
@@ -4515,10 +4560,12 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:9.0.0"],\
           ["eslint-plugin-prettier", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:5.0.0"],\
           ["firebase", "npm:10.5.2"],\
+          ["framer-motion", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:10.16.4"],\
           ["next", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:13.5.6"],\
           ["prettier", "npm:3.0.3"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:18.3.1"],\
+          ["react-infinite-scroll-component", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:6.1.0"],\
           ["react-query", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:3.39.3"],\
           ["swiper", "npm:11.0.3"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
@@ -4993,6 +5040,29 @@ const RAW_RUNTIME_STATE =
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.3.1"],\
           ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-infinite-scroll-component", [\
+      ["npm:6.1.0", {\
+        "packageLocation": "./.yarn/cache/react-infinite-scroll-component-npm-6.1.0-fc628f1f18-8de02f178a.zip/node_modules/react-infinite-scroll-component/",\
+        "packageDependencies": [\
+          ["react-infinite-scroll-component", "npm:6.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:6.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-infinite-scroll-component-virtual-a4a5d338ee/0/cache/react-infinite-scroll-component-npm-6.1.0-fc628f1f18-8de02f178a.zip/node_modules/react-infinite-scroll-component/",\
+        "packageDependencies": [\
+          ["react-infinite-scroll-component", "virtual:c9174ec5f9ec213eb6533e674c50675c56592f9d698fea2223777cdb8a3308b3c053abf24280dc948155e3f91b0d173022ba13e8c27625cf68634d6bea3442f8#npm:6.1.0"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["react", "npm:18.3.1"],\
+          ["throttle-debounce", "npm:2.3.0"]\
         ],\
         "packagePeers": [\
           "@types/react",\
@@ -5555,6 +5625,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/text-table-npm-0.2.0-d92a778b59-02805740c1.zip/node_modules/text-table/",\
         "packageDependencies": [\
           ["text-table", "npm:0.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["throttle-debounce", [\
+      ["npm:2.3.0", {\
+        "packageLocation": "./.yarn/cache/throttle-debounce-npm-2.3.0-0e354dff02-41648e4cf4.zip/node_modules/throttle-debounce/",\
+        "packageDependencies": [\
+          ["throttle-debounce", "npm:2.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
