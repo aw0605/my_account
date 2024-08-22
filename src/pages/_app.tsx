@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider, Hydrate } from 'react-query'
 import { SessionProvider } from 'next-auth/react'
+import { AlertContextProvider } from '@contexts/AlertContext'
 import AuthGuard from '@components/auth/AuthGuard'
 import { Global } from '@emotion/react'
 import Navbar from '@shared/Navbar'
@@ -20,10 +21,12 @@ export default function App({
       <SessionProvider session={session}>
         <QueryClientProvider client={client}>
           <Hydrate state={dehydratedState}>
-            <AuthGuard>
-              <Navbar />
-              <Component {...pageProps} />
-            </AuthGuard>
+            <AlertContextProvider>
+              <AuthGuard>
+                <Navbar />
+                <Component {...pageProps} />
+              </AuthGuard>
+            </AlertContextProvider>
           </Hydrate>
         </QueryClientProvider>
       </SessionProvider>
