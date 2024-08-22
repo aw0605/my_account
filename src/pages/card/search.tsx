@@ -33,8 +33,6 @@ function searchPage() {
     setKeyword(e.target.value)
   }, [])
 
-  console.log(debouncedKeyword)
-
   return (
     <div>
       <Top title="추천카드" subTitle="회원님을 위해 준비했어요" />
