@@ -4037,6 +4037,7 @@ __metadata:
     prettier: "npm:3.0.3"
     react: "npm:^18"
     react-dom: "npm:^18"
+    react-hook-form: "npm:7.48.2"
     react-infinite-scroll-component: "npm:6.1.0"
     react-markdown: "npm:9.0.0"
     react-query: "npm:3.39.3"
@@ -4548,6 +4549,15 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:7.48.2":
+  version: 7.48.2
+  resolution: "react-hook-form@npm:7.48.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 10c0/77663276288d3e240da76c469612fec2bfb2dd34ed0512adb8554b8567e89a316c3df62266e51639f66a9a9d50ce175e8dc965f94bc31afecb460ed48333dafa
   languageName: node
   linkType: hard
 
