@@ -1,9 +1,9 @@
 import { useState, MouseEvent } from 'react'
 import dynamic from 'next/dynamic'
 import { TERM_LIST } from '@constants/account'
+import Agreement from '@shared/Agreement'
 
 import { Term } from '@models/account'
-import Agreement from '../shared/Agreement'
 
 const FixedBottomBtn = dynamic(() => import('@shared/FixedBottomBtn'))
 
