@@ -1,5 +1,6 @@
-import { useSession, signOut } from 'next-auth/react'
-import withAuth from '@shared/hocs/withAuth'
+import { signOut } from 'next-auth/react'
+import withAuth from '@hooks/withAuth'
+import useUser from '@hooks/useUser'
 import Image from 'next/image'
 import Flex from '@shared/Flex'
 import Spacing from '@shared/Spacing'
@@ -7,7 +8,7 @@ import Text from '@shared/Text'
 import Button from '@shared/Button'
 
 function MyPage() {
-  const { data: session } = useSession()
+  const user = useUser()
 
   return (
     <div>
@@ -15,7 +16,7 @@ function MyPage() {
       <Flex direction="column" justify="center" align="center">
         <Image
           src={
-            session?.user?.image ??
+            user?.image ??
             'https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-64.png'
           }
           alt="유저 이미지"
@@ -25,10 +26,10 @@ function MyPage() {
         />
         <Spacing size={16} />
         <Text bold={true} typography="t5">
-          {session?.user?.name}
+          {user?.name}
         </Text>
         <Text typography="t7" color="gray600">
-          {session?.user?.email}
+          {user?.email}
         </Text>
       </Flex>
       <Spacing size={50} />

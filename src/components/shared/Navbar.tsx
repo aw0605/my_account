@@ -1,25 +1,25 @@
 import { useCallback } from 'react'
 import { useRouter } from 'next/router'
+import useUser from '@hooks/useUser'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useSession } from 'next-auth/react'
 import { css } from '@emotion/react'
 import Flex from './Flex'
 import Button from './Button'
 import { colors } from '@styles/colorPalette'
 
 function Navbar() {
-  const { data: session } = useSession()
+  const user = useUser()
   const router = useRouter()
   const showSignBtn = ['/auth/signin'].includes(router.pathname) === false
 
   const renderBtn = useCallback(() => {
-    if (session != null) {
+    if (user != null) {
       return (
         <Link href="/my">
           <Image
             src={
-              session.user?.image ??
+              user.image ??
               'https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-64.png'
             }
             alt="유저 이미지"
@@ -40,7 +40,7 @@ function Navbar() {
     }
 
     return null
-  }, [session, showSignBtn])
+  }, [user, showSignBtn])
 
   return (
     <Flex justify="space-between" align="center" css={navbarStyles}>

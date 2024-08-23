@@ -1,12 +1,11 @@
 import { useCallback, useState, ChangeEvent } from 'react'
 import { collection, doc, setDoc } from 'firebase/firestore'
-import { store } from '@/remote/firebase'
-
+import { store } from '@remote/firebase'
+import { COLLECTIONS } from '@constants/collection'
 import Flex from '@shared/Flex'
 import TextField from '@shared/TextField'
 import Button from '@shared/Button'
-import { COLLECTIONS } from '@/constants/collection'
-import Spacing from '../shared/Spacing'
+import Spacing from '@shared/Spacing'
 import Preview from '../event/Preview'
 
 function EventForm() {

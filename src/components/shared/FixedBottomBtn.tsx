@@ -49,6 +49,7 @@ const Container = styled.div`
   padding: 20px 10px 8px;
   transform: translateY(100%);
   animation: ${slideUp} 0.5s ease-in-out forwards;
+  z-index: 1001;
 `
 
 const BtnStyles = css`
