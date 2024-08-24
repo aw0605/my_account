@@ -4,6 +4,7 @@ import Spacing from '@shared/Spacing'
 import CardListAddBtn from '@components/test/CardListAddBtn'
 import EventBannerAddBtn from '@components/test/EventBannerAddBtn'
 import EventForm from '@components/test/EventForm'
+import TransactionForm from '@components/test/TransactionForm'
 
 function TestPage() {
   return (
@@ -29,6 +30,15 @@ function TestPage() {
       />
       <div style={{ padding: 12 }}>
         <EventForm />
+      </div>
+      <Spacing
+        size={8}
+        backgroundColor="gray100"
+        style={{ margin: '20px 0' }}
+      />
+      <div style={{ padding: 24 }}>
+        <Text bold={true}>입출금테스트</Text>
+        <TransactionForm />
       </div>
     </Flex>
   )
