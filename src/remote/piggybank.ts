@@ -5,7 +5,9 @@ import {
   limit,
   orderBy,
   query,
+  QuerySnapshot,
   setDoc,
+  startAfter,
   where,
 } from 'firebase/firestore'
 import { store } from './firebase'
@@ -40,4 +42,42 @@ export async function getPiggybank(userId: string) {
     startDate: piggybank.startDate.toDate(),
     endDate: piggybank.endDate.toDate(),
   }
+}
+
+export async function getPiggybanks({
+  userId,
+  pageParam,
+}: {
+  userId: string
+  pageParam?: QuerySnapshot<Piggybank>
+}) {
+  const piggybankQuery =
+    pageParam == null
+      ? query(
+          collection(store, COLLECTIONS.PIGGYBANK),
+          where('userId', '==', userId),
+          where('endDate', '>=', new Date()),
+          orderBy('endDate', 'asc'),
+          limit(10),
+        )
+      : query(
+          collection(store, COLLECTIONS.PIGGYBANK),
+          where('userId', '==', userId),
+          where('endDate', '>=', new Date()),
+          orderBy('endDate', 'asc'),
+          startAfter(pageParam),
+          limit(10),
+        )
+
+  const piggybankSnapshot = await getDocs(piggybankQuery)
+  const lastVisible = piggybankSnapshot.docs[piggybankSnapshot.docs.length - 1]
+
+  const items = piggybankSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...(doc.data() as Piggybank),
+    startDate: doc.data().startDate.toDate(),
+    endDate: doc.data().endDate.toDate(),
+  }))
+
+  return { items, lastVisible }
 }
