@@ -9,6 +9,8 @@ import Input from '@shared/Input'
 import Top from '@shared/Top'
 
 function CardListPage() {
+  const navigate = useRouter()
+
   const {
     data,
     hasNextPage = false,
@@ -31,8 +33,6 @@ function CardListPage() {
   if (data == null) {
     return null
   }
-
-  const navigate = useRouter()
 
   const cards = data?.pages.map(({ items }) => items).flat()
 

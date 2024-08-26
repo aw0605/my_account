@@ -5,6 +5,7 @@ import CardListAddBtn from '@components/test/CardListAddBtn'
 import EventBannerAddBtn from '@components/test/EventBannerAddBtn'
 import EventForm from '@components/test/EventForm'
 import TransactionForm from '@components/test/TransactionForm'
+import FAQAddBtn from '@components/test/FAQAddBtn'
 
 function TestPage() {
   return (
@@ -28,6 +29,17 @@ function TestPage() {
         backgroundColor="gray100"
         style={{ margin: '20px 0' }}
       />
+
+      <Flex direction="column" style={{ padding: 24 }}>
+        <Text bold={true}>FAQ</Text>
+        <FAQAddBtn />
+      </Flex>
+      <Spacing
+        size={8}
+        backgroundColor="gray100"
+        style={{ margin: '20px 0' }}
+      />
+
       <div style={{ padding: 12 }}>
         <EventForm />
       </div>
@@ -36,6 +48,7 @@ function TestPage() {
         backgroundColor="gray100"
         style={{ margin: '20px 0' }}
       />
+
       <div style={{ padding: 24 }}>
         <Text bold={true}>입출금테스트</Text>
         <TransactionForm />

@@ -9,7 +9,7 @@ import Text from '@shared/Text'
 import ListRow from '@shared/ListRow'
 import Badge from '@shared/Badge'
 
-function searchPage() {
+function SearchPage() {
   const [keyword, setKeyword] = useState('')
   const debouncedKeyword = useDebounce(keyword)
   const navigate = useRouter()
@@ -69,4 +69,4 @@ function searchPage() {
   )
 }
 
-export default searchPage
+export default SearchPage
