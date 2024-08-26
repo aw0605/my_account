@@ -1,20 +1,20 @@
 import { useCallback } from 'react'
+import { GetServerSidePropsContext } from 'next'
+import { getSession } from 'next-auth/react'
+import { dehydrate, QueryClient } from 'react-query'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Image from 'next/image'
 import { differenceInDays } from 'date-fns'
-import { css } from '@emotion/react'
 import withAuth from '@hooks/withAuth'
 import usePiggybanks from '@components/account/hooks/usePiggybanks'
+import { getPiggybanks } from '@remote/piggybank'
 import addDelimiter from '@utils/addDelimiter'
 import Flex from '@shared/Flex'
 import ListRow from '@shared/ListRow'
 import Text from '@shared/Text'
-import Spacing from '@/components/shared/Spacing'
-import { GetServerSidePropsContext } from 'next'
-import { getSession } from 'next-auth/react'
-import { dehydrate, QueryClient } from 'react-query'
-import { getPiggybanks } from '@/remote/piggybank'
-import { User } from '@/models/user'
+import Spacing from '@shared/Spacing'
+
+import { User } from '@models/user'
 
 function PiggybanksPage() {
   const {

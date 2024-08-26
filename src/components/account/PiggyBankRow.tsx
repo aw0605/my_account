@@ -1,14 +1,14 @@
 import { useQuery } from 'react-query'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import useUser from '@/hooks/useUser'
-import withSusepnse from '@hooks/withSuspense'
-import { getPiggybank } from '@/remote/piggybank'
-import ListRow from '@shared/ListRow'
 import { differenceInDays } from 'date-fns'
-import Flex from '../shared/Flex'
-import Text from '../shared/Text'
-import addDelimiter from '@/utils/addDelimiter'
+import useUser from '@hooks/useUser'
+import withSusepnse from '@hooks/withSuspense'
+import { getPiggybank } from '@remote/piggybank'
+import addDelimiter from '@utils/addDelimiter'
+import ListRow from '@shared/ListRow'
+import Flex from '@shared/Flex'
+import Text from '@shared/Text'
 
 function PiggyBankRow() {
   const navigate = useRouter()

@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { colors } from '@/styles/colorPalette'
+import { colors } from '@styles/colorPalette'
 import ParentSize from '@visx/responsive/lib/components/ParentSize'
 import { Pie } from '@visx/shape'
 import { Group } from '@visx/group'

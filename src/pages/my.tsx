@@ -1,19 +1,27 @@
 import { signOut } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import Image from 'next/image'
 import withAuth from '@hooks/withAuth'
 import useUser from '@hooks/useUser'
-import Image from 'next/image'
 import Flex from '@shared/Flex'
 import Spacing from '@shared/Spacing'
 import Text from '@shared/Text'
 import Button from '@shared/Button'
+import ListRow from '@shared/ListRow'
 
 function MyPage() {
   const user = useUser()
+  const navigate = useRouter()
 
   return (
     <div>
-      <Spacing size={100} />
-      <Flex direction="column" justify="center" align="center">
+      <Spacing size={30} />
+      <Flex
+        direction="column"
+        justify="center"
+        align="center"
+        style={{ padding: 24 }}
+      >
         <Image
           src={
             user?.image ??
@@ -31,11 +39,24 @@ function MyPage() {
         <Text typography="t7" color="gray600">
           {user?.email}
         </Text>
-      </Flex>
-      <Spacing size={50} />
-      <Flex justify="center">
+        <Spacing size={40} />
         <Button onClick={() => signOut({ callbackUrl: '/' })}>로그아웃</Button>
       </Flex>
+
+      <Spacing
+        size={8}
+        backgroundColor="gray100"
+        style={{ margin: '20px 0 ' }}
+      />
+      <ul>
+        <ListRow
+          contents={<ListRow.Texts title="약관" subTitle="약관 목록 및 철회" />}
+          withArrow={true}
+          onClick={() => {
+            navigate.push('/settings/terms')
+          }}
+        />
+      </ul>
     </div>
   )
 }

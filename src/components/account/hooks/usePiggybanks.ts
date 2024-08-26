@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from 'react-query'
-import { getPiggybanks } from '@/remote/piggybank'
+import { getPiggybanks } from '@remote/piggybank'
 import useUser from '@hooks/useUser'
 
 function usePiggybanks({ suspense }: { suspense?: boolean } = {}) {
