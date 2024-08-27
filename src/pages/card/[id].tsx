@@ -38,7 +38,11 @@ function CardDetailPage({ initialCard }: CardDetailPageProps) {
 
   return (
     <div>
-      <SEO title={`${corpName} ${name}`} description={subTitle} image="https://cdn4.iconfinder.com/data/icons/travello-basic-ui-1/64/Correct-512.png" />
+      <SEO
+        title={`${corpName} ${name}`}
+        description={subTitle}
+        image="https://cdn4.iconfinder.com/data/icons/travello-basic-ui-1/64/Correct-512.png"
+      />
       <Top title={`${corpName} ${name}`} subTitle={subTitle} />
 
       <ul>

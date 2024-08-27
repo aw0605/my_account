@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider, Hydrate } from 'react-query'
 import { SessionProvider } from 'next-auth/react'
 import { AlertContextProvider } from '@contexts/AlertContext'
 import { Global } from '@emotion/react'
+import ErrorBoundary from '@components/shared/ErrorBoundary'
 import Navbar from '@shared/Navbar'
 import Layout from '@shared/Layout'
 
@@ -20,10 +21,12 @@ export default function App({
       <SessionProvider session={session}>
         <QueryClientProvider client={client}>
           <Hydrate state={dehydratedState}>
-            <AlertContextProvider>
-              <Navbar />
-              <Component {...pageProps} />
-            </AlertContextProvider>
+            <ErrorBoundary>
+              <AlertContextProvider>
+                <Navbar />
+                <Component {...pageProps} />
+              </AlertContextProvider>
+            </ErrorBoundary>
           </Hydrate>
         </QueryClientProvider>
       </SessionProvider>
