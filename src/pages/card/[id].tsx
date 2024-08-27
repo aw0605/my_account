@@ -1,5 +1,6 @@
 import { GetServerSidePropsContext } from 'next'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { useQuery } from 'react-query'
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
@@ -8,9 +9,9 @@ import Top from '@shared/Top'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
+import SEO from '@shared/SEO'
 
 import { Card } from '@models/card'
-import dynamic from 'next/dynamic'
 
 const FixedBottomBtn = dynamic(() => import('@shared/FixedBottomBtn'), {
   ssr: false,
@@ -37,6 +38,7 @@ function CardDetailPage({ initialCard }: CardDetailPageProps) {
 
   return (
     <div>
+      <SEO title={`${corpName} ${name}`} description={subTitle} image="https://cdn4.iconfinder.com/data/icons/travello-basic-ui-1/64/Correct-512.png" />
       <Top title={`${corpName} ${name}`} subTitle={subTitle} />
 
       <ul>
