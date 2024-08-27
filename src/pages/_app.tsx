@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider, Hydrate } from 'react-query'
 import { SessionProvider } from 'next-auth/react'
 import { AlertContextProvider } from '@contexts/AlertContext'
 import { Global } from '@emotion/react'
-import ErrorBoundary from '@components/shared/ErrorBoundary'
+import ErrorBoundary from '@shared/ErrorBoundary'
 import Navbar from '@shared/Navbar'
 import Layout from '@shared/Layout'
 
