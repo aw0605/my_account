@@ -21,7 +21,7 @@ function FullPageLoader({ message }: { message?: string }) {
         <img
           width={120}
           src="https://cdn.pixabay.com/animation/2023/06/13/15/12/15-12-47-323_512.gif"
-          alt=""
+          alt="로딩 이미지"
         />
 
         {message != null ? (
